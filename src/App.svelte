@@ -2,7 +2,8 @@
   import { Route, active } from "tinro";
   import Location from "./components/Location.svelte";
   import Photo from "./components/Photo.svelte";
-  import L1 from "./components/L1.svelte";
+  import L1_1 from "./components/L1_1.svelte";
+  import L1_2 from "./components/L1_2.svelte";
 </script>
 
 <style>
@@ -11,7 +12,8 @@
 
 <main>
   <div class="scrollmenu">
-    <a href="/" use:active exact>L_1</a>
+    <a href="/" use:active exact>L1_1</a>
+    <a href="/l1_2" use:active exact>L1_2</a>
     <!-- <a href="/location" use:active exact>Location</a>
     <a href="/photo" use:active exact>Photo</a> -->
   </div>
@@ -25,7 +27,10 @@
   <Location />
 </Route>
 <Route path="/">
-  <L1 />
+  <L1_1 />
+</Route>
+<Route path="/l1_2">
+  <L1_2 />
 </Route>
 <!-- <Route path="/currentdustazure">
   <CurrentDustAzure />
