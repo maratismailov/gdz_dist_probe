@@ -7,12 +7,14 @@
   // import "leaflet/dist/leaflet.css";
   let height = (window.innerHeight * 0.89).toString() + "px";
   let map;
-  let center = [42.867898, 74.589395];
+  const lat = 42.867972
+  const lon = 74.589243
+  const center = [lat, lon];
   let zoom = 17;
   let id;
   let bing;
   let markerGroup;
-  const popup = 'Название объекта: Гимназия-комплекс №70' + '<br>Координаты объекта: 42.867898, 74.589395'
+  const popup = 'Название объекта: Гимназия-комплекс №70' + '<br>Координаты объекта:' + lat + ' ' + lon 
   const api_key =
     "AijiWK2E56tAWqQiXj0TpzHR4V0xb0wDyCUzeUIqjbuPuwoFPP2kiWNi6TUVMpBn";
 
@@ -27,7 +29,7 @@
       }
     };
     createMap();
-    L.marker([42.867898, 74.589395])
+    L.marker([lat, lon])
           .bindPopup(popup)
           .addTo(markerGroup)
           .on("click", () => {
